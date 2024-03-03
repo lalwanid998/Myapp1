@@ -27,6 +27,18 @@
     <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
     <link href="http://fonts.googleapis.com/css?family=Coda:400,800" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <title>React App</title>
   </head>
   <body>

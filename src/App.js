@@ -6,7 +6,7 @@ import Contact from './Contact';
 function App() {
   return (
     <>
-    <Router>
+    <Router basename="myapp1">
     <div id="menu-wrapper">
     <div id="menu">
     <ul>
